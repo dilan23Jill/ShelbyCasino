@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+html, body {
+  height: 100vh; }
+
+body {
+  background: url("../img/background.jpg") no-repeat;
+  background-size: cover;
+  font-family: Leander; }
+
+.contract {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: fit-content;
+  height: fit-content;
+  background-color: #d7b77d;
+  border-radius: 12px;
+  padding: 2rem 3rem; }
+
+h1 {
+  font-size: 60px; }
+
+#terms, #submit, #nbet, label {
+  margin-top: 1em;
+  cursor: pointer; }
+
+.info {
+  height: 3em;
+  border-radius: 12px;
+  margin-left: 14%;
+  text-align: center; }
+
+#nbet {
+  margin-left: 50%;
+  transform: translate(-50%);
+  width: 17%;
+  text-align: center; }
+
+#submit {
+  margin: 4em 0 0 50%;
+  transform: translate(-50%);
+  height: 4em;
+  width: 5em;
+  border-radius: 12px; }
+
+/*# sourceMappingURL=style.css.map */
