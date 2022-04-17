@@ -28,8 +28,8 @@
             <label for="terms">By checking the box you agree that you are older than 18 years old and <br />
                 that you accept all the terms and conditions of the Peaky FOOKING Blinders. </label> <br />
             <input type="submit" id="submit" value="START">
-
         </form>
+       
     </div>
     <script src="js/script.js"></script>
 </body>
