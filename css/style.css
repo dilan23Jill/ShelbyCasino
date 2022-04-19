@@ -18,7 +18,7 @@ body {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -40,26 +40,40 @@ h1 {
 }
 
 .info {
+  position: relative;
   height: 3em;
+  width: 30%;
+  top: 1em;
   border-radius: 12px;
-  margin-left: 14%;
   text-align: center;
 }
 
+#lname {
+  right: -16em;
+}
+
+#fname {
+  left: 1em;
+}
+
 #nbet {
-  margin-left: 50%;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
-  width: 17%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 20%;
   text-align: center;
+  margin-bottom: 1em;
 }
 
 #submit {
   margin: 4em 0 0 50%;
   -webkit-transform: translate(-50%);
-          transform: translate(-50%);
+  transform: translate(-50%);
   height: 4em;
   width: 5em;
   border-radius: 12px;
 }
+
+/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.sass.map */
+
 /*# sourceMappingURL=style.css.map */

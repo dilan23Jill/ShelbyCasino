@@ -1,3 +1,3 @@
 $(function () {
-  $('#nbet').attr('placeholder', 'Bet (min: 5€):');
+  $('#nbet').attr('placeholder', 'Bet (min: 5£):');
 });
