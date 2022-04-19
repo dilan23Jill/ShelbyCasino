@@ -9,7 +9,8 @@ html, body {
 }
 
 body {
-  background: url("../img/background.jpg") no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("../img/background.jpg") no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/background.jpg") no-repeat;
   background-size: cover;
   font-family: Leander;
 }
@@ -37,7 +38,7 @@ h1 {
 }
 
 #terms, #submit, #nbet, label {
-  margin-top: 2.5em;
+  margin-top: 2.7em;
   cursor: pointer;
 }
 
