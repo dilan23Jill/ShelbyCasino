@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,6 +19,7 @@
 </head>
 
 <body>
+    
     <div class="contract">
         <form>
             <h1>CONTRACT FORM</h1><br />
