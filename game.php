@@ -1,4 +1,18 @@
-<!DOCTYPE html>
+ <?php
+    $_SESSION['info'] = $_POST;
+
+    if (isset($_SESSION['info'])) {
+
+        echo "Your registration is: " . $_SESSION['info']['fname'] . 
+        $_SESSION['info']['lname'] . 
+        $_SESSION['info']['nbet'] . "bra";
+    }
+
+?>
+
+    
+
+  <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -18,7 +32,10 @@
 </head>
 
 <body>
+
+    
     <script src="js/script.js"></script>
 </body>
 
-</html>
+</html> 
+

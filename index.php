@@ -1,4 +1,6 @@
-
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,19 +23,21 @@
 <body>
     
     <div class="contract">
-        <form method="post" action="game.php">
-            <h1>CONTRACT FORM</h1><br />
+        <form method="POST" action="game.php">
+             <h1>CONTRACT FORM</h1><br />
             <input type="text" class="info" id="fname" name="fname" placeholder="First name" required>
             <input type="text" class="info" id="lname" name="lname" placeholder="Last name" required><br />
             <input type="number" class="info" id="nbet" name="nbet" min="5" max="500" required><br />
             <input type="checkbox" id="terms" name="terms" required>
             <label for="terms">By checking the box you agree that you are older than 18 years old and <br />
                 that you accept all the terms and conditions of the Peaky FOOKING Blinders. </label> <br />
-            <input type="submit" id="submit" value="START">
+            <input type="submit" id="submit" value="START"> 
         </form>
-       
     </div>
+
+
     <script src="js/script.js"></script>
 </body>
 
 </html>
+
