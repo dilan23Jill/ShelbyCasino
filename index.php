@@ -31,7 +31,7 @@ session_start();
             <input type="checkbox" id="terms" name="terms" required>
             <label for="terms">By checking the box you agree that you are older than 18 years old and <br />
                 that you accept all the terms and conditions of the Peaky FOOKING Blinders. </label> <br />
-            <input type="submit" id="submit" value="START"> 
+            <input type="submit" id="submit" value="START" name="submit"> 
         </form>
     </div>
 
