@@ -35,7 +35,9 @@ session_start();
         </form>
     </div>
 
-
+    <script>
+         var credit;
+     </script>
     <script src="js/script.js"></script>
 </body>
 

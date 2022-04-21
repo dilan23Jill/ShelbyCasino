@@ -1,15 +1,22 @@
  <?php
     $_SESSION['info'] = $_POST;
+    $bet[0] = 5;
+    $bet[1] = 10;
+    $bet[3] = 20;
+    $bet[4] = 50;
+    $bet[5] = 100;
+    $bet[6] = 500;
+
+    $name = "bra";
 
     if (!isset($_POST['submit'])) {
         header('Location: index.php');
         exit;
-    } else {
+    } /* else {
         echo "Your name is: " . $_SESSION['info']['fname'] . "<br>" .
-            "Your surname is: " . $_SESSION['info']['lname'] . "<br>" .
-            "Your bet is: " . $_SESSION['info']['nbet'];
-    }
-    ?>
+            "Your surname is: " . $_SESSION['info']['lname'];
+    } */
+?>
 
 
 
@@ -21,7 +28,7 @@
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Shelby Casino</title>
-     <link rel="icon" type="image/x-icon" href="img/icon/favicon.ico">
+     <link rel="icon" type="image/x-icon" href="/img/icon/favicon.ico">
      <link rel="stylesheet" href="css/style.css?v=1.0">
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
      <style>
@@ -32,9 +39,37 @@
      </style>
  </head>
 
- <body>
+ <body onload="bodyonload()">
+     <form method="POST" action="result.php">
+         <p id="credit"></p>
+                  <h1 id="header2">PLACE YOUR BETS</h1>
 
+         <div class="stable">
+             <img src="img/horse/horse1.png" alt="horse1" class="horses">
+             <img src="img/horse/horse2.png" alt="horse2" class="horses">
+             <img src="img/horse/horse3.png" alt="horse3" class="horses">
+             <img src="img/horse/horse4.png" alt="horse4" class="horses">
+             <img src="img/horse/horse5.png" alt="horse5" class="horses">
+             <img src="img/horse/horse6.png" alt="horse6" class="horses">
+             <img src="img/horse/horse7.png" alt="horse7" class="horses">
 
+             
+         </div>
+         <div class="betting_opt">
+         <div class="bet_opt">5</div>
+         <div class="bet_opt">10</div>
+         <div class="bet_opt">20</div>
+         <div class="bet_opt">50</div>
+         <div class="bet_opt">100</div>
+         <div class="bet_opt">500</div>
+        </div>
+        <p id="current_bet">CURRENT BET: <mark id="current_bet_num">0</mark></p>
+        <button type="button" id="rebet">REBET</button>
+         <input type="submit" id="submit_bet" value="bet" name="submit_bet">
+     </form>
+     <script>
+          credit = '<?= $_SESSION['info']['nbet'] ?>';
+     </script>
      <script src="js/script.js"></script>
  </body>
 
