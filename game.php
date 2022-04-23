@@ -1,11 +1,14 @@
  <?php
     $_SESSION['info'] = $_POST;
+    $current_bet = 0;
     $bet[0] = 5;
     $bet[1] = 10;
     $bet[3] = 20;
     $bet[4] = 50;
     $bet[5] = 100;
     $bet[6] = 500;
+
+  echo $_SESSION['info']['nbet'];
 
     $name = "bra";
 
@@ -40,7 +43,6 @@
  </head>
 
  <body onload="bodyonload()">
-     <form method="POST" action="result.php">
          <p id="credit"></p>
                   <h1 id="header2">PLACE YOUR BETS</h1>
 
@@ -54,9 +56,10 @@
              <img src="img/horse/horse7.png" alt="horse7" class="horses">
 
              
-         </div>
+         </div>    
+        <form action="game.php" method="post">
          <div class="betting_opt">
-         <div class="bet_opt">5</div>
+         <div class="bet_opt" id="bet5" onclick="betValue()">5</div>
          <div class="bet_opt">10</div>
          <div class="bet_opt">20</div>
          <div class="bet_opt">50</div>
@@ -65,10 +68,24 @@
         </div>
         <p id="current_bet">CURRENT BET: <mark id="current_bet_num">0</mark></p>
         <button type="button" id="rebet">REBET</button>
+        </form>
+
          <input type="submit" id="submit_bet" value="bet" name="submit_bet">
-     </form>
      <script>
           credit = '<?= $_SESSION['info']['nbet'] ?>';
+
+          /* function betValue() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+        document.getElementById("current_bet_num").innerHTML = 20;
+       
+    
+  };
+  xhttp.open("GET", "game.php", true);
+  xhttp.send();
+} */
+
+
      </script>
      <script src="js/script.js"></script>
  </body>

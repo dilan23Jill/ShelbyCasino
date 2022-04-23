@@ -1,10 +1,18 @@
 $(function () {
   $('#nbet').attr('placeholder', 'Bet (min: 5£):');
-  /*  $("#header2").on('click', function() {
+    $("#header2").on('click', function() {
     $("#header2").animate({"left":"0", "color":"blue", "transform": "translateX(50%)", "top":"3em"
   }); 
-});*/
-  total_bet = 0;
+});
+$("#loadTextFile").click(function (e) {
+  $.ajax({
+      url: "file.txt",
+      success: function (result,status,xhr) {
+          $("#textData").html(result);
+      }
+  });
+});
+  /* total_bet = 0;
   bet_value = 0;
   current_credit = credit;
   $('#credit').text('CREDIT: ' + credit);
@@ -57,6 +65,16 @@ $(function () {
     $(this).css({ transform: 'scale(1.4)' });
   });
 });
+
+$("#bet5").click(function() {
+  $.post("game.php", {change: $(this).val()},
+      function (data)
+      {
+         $("#mainContent").html(data);
+      }); */
+});
+
+
 function bodyonload() {
   $('body').css('background-image', 'url()');
 }
