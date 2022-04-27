@@ -1,16 +1,5 @@
  <?php
     $_SESSION['info'] = $_POST;
-    $current_bet = 0;
-    $bet[0] = 5;
-    $bet[1] = 10;
-    $bet[3] = 20;
-    $bet[4] = 50;
-    $bet[5] = 100;
-    $bet[6] = 500;
-
-  echo $_SESSION['info']['nbet'];
-
-    $name = "bra";
 
     if (!isset($_POST['submit'])) {
         header('Location: index.php');
@@ -20,9 +9,6 @@
             "Your surname is: " . $_SESSION['info']['lname'];
     } */
 ?>
-
-
-
  <!DOCTYPE html>
  <html lang="en">
 
@@ -47,19 +33,33 @@
                   <h1 id="header2">PLACE YOUR BETS</h1>
 
          <div class="stable">
-             <img src="img/horse/horse1.png" alt="horse1" class="horses">
-             <img src="img/horse/horse2.png" alt="horse2" class="horses">
-             <img src="img/horse/horse3.png" alt="horse3" class="horses">
-             <img src="img/horse/horse4.png" alt="horse4" class="horses">
-             <img src="img/horse/horse5.png" alt="horse5" class="horses">
-             <img src="img/horse/horse6.png" alt="horse6" class="horses">
-             <img src="img/horse/horse7.png" alt="horse7" class="horses">
-
+             <div class="horse_opt">
+             <img src="img/horse/horse1.png" alt="horse1" id="h1" class="horses">
+            <p id="num_bet1"></p></div>
+             <div class="horse_opt">
+             <img src="img/horse/horse2.png" alt="horse2" id="h2" class="horses">
+             <p id="num_bet2"></p></div>
+             <div class="horse_opt">
+             <img src="img/horse/horse3.png" alt="horse3" id="h3" class="horses">
+             <p id="num_bet3"></p></div>
+             <div class="horse_opt">
+             <img src="img/horse/horse4.png" alt="horse4" id="h4" class="horses">
+             <p id="num_bet4"></p></div>
+             <div class="horse_opt">
+             <img src="img/horse/horse5.png" alt="horse5" id="h5" class="horses">
+             <p id="num_bet5"></p></div>
+             <div class="horse_opt">
+             <img src="img/horse/horse6.png" alt="horse6" id="h6" class="horses">
+             <p id="num_bet6"></p></div>
+             <div class="horse_opt">
+             <img src="img/horse/horse7.png" alt="horse7" id="h7" class="horses">
+             <p id="num_bet7"></p></div>
+            
              
          </div>    
         <form action="game.php" method="post">
          <div class="betting_opt">
-         <div class="bet_opt" id="bet5" onclick="betValue()">5</div>
+         <div class="bet_opt" id="bet5">5</div>
          <div class="bet_opt">10</div>
          <div class="bet_opt">20</div>
          <div class="bet_opt">50</div>
@@ -72,21 +72,9 @@
 
          <input type="submit" id="submit_bet" value="bet" name="submit_bet">
      <script>
-          credit = '<?= $_SESSION['info']['nbet'] ?>';
-
-          /* function betValue() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-        document.getElementById("current_bet_num").innerHTML = 20;
-       
-    
-  };
-  xhttp.open("GET", "game.php", true);
-  xhttp.send();
-} */
-
-
+            credit = '<?= $_SESSION['info']['nbet'] ?>';
      </script>
+    
      <script src="js/script.js"></script>
  </body>
 

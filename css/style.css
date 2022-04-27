@@ -140,6 +140,10 @@ h1 {
   width: 8em;
   height: 6em;
 }
+.horse_opt{
+  display: inline-block;
+  margin-left: 2.5em;
+}
 
 /*# sourceMappingURL=style.css.map */
 /*# sourceMappingURL=style.sass.map */
