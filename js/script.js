@@ -1,56 +1,120 @@
-$(document).ready(function() {
- 
-horse=false;
-horse_num=3;
-horse_bet1=0;
-horse_bet2=0;
-horse_bet3=0;
+$(document).ready(function () {
+  horse = false;
+  horse_bet1 = 0;
+  horse_bet2 = 0;
+  horse_bet3 = 0;
+  horse_bet4 = 0;
+  horse_bet5 = 0;
+  horse_bet6 = 0;
+  horse_bet7 = 0;
 
-horse1=$('.horses:nth-of-type(1)');
-horse2=$('.horses:nth-of-type(2)');
-horse3=$('.horses:nth-of-type(3)');
-horse4=$('.horses:nth-of-type(4)');
-horse5=$('.horses:nth-of-type(5)');
-horse6=$('.horses:nth-of-type(6)');
-horse7=$('.horses:nth-of-type(7)');
-
+  horse1 = $('.horses:nth-of-type(1)');
+  horse2 = $('.horses:nth-of-type(2)');
+  horse3 = $('.horses:nth-of-type(3)');
+  horse4 = $('.horses:nth-of-type(4)');
+  horse5 = $('.horses:nth-of-type(5)');
+  horse6 = $('.horses:nth-of-type(6)');
+  horse7 = $('.horses:nth-of-type(7)');
 
   $('#nbet').attr('placeholder', 'Bet (min: 5£):');
-    
-$('.horses').click(function () {
-  $('.horses').css({ transform: 'scale(1)', border: '0px solid black' });
-  $(this).css({ transform: 'scale(1.4)', border: '3px solid black'});
-  choosed_horse=this.id;
-  horse=true;
-  console.log(choosed_horse);
-});
 
+  $('.horses').click(function () {
+    $('.horses').css({ transform: 'scale(1)', border: '0px solid black' });
+    $(this).css({ transform: 'scale(1.4)' });
+    choosed_horse = this.id;
+    horse = true;
+  });
+
+  bra = true;
   total_bet = 0;
   bet_value = 0;
   current_credit = credit;
+  horse_arr = [];
+
   $('#credit').text('CREDIT: ' + credit);
 
   function checkBet() {
-    if(horse==true){
-    if (total_bet + bet_value > credit) {
-      alert('no money');
-    } else {
-      total_bet = total_bet + bet_value;
-      $('#current_bet_num').text(total_bet);
-      current_credit = current_credit - bet_value;
-      $('#credit').text('CREDIT: ' + current_credit);
-      sum_bet();
+    console.log(horse_arr);
+    if (horse == true) {
+      if (total_bet + bet_value > credit) {
+        alert('no money');
+      } else {
+        sum_bet();
+        if (bra) {
+          total_bet = total_bet + bet_value;
+          $('#current_bet_num').text(total_bet);
+          current_credit = current_credit - bet_value;
+          $('#credit').text('CREDIT: ' + current_credit);
+        }
+      }
+    } else alert('choose horse');
+  }
+  function sum_bet() {
+    if (choosed_horse == 'h1') {
+      if (horse_arr.length < 3 || jQuery.inArray('h1', horse_arr) !== -1) {
+        if (jQuery.inArray('h1', horse_arr) == -1) horse_arr.push('h1');
+        horse_bet1 = horse_bet1 + bet_value;
+        $('#num_bet1').html(horse_bet1);
+      } else {
+        alert('bet max on 3 horses');
+        bra = false;
+      }
+    } else if (choosed_horse == 'h2') {
+      if (horse_arr.length < 3 || jQuery.inArray('h2', horse_arr) !== -1) {
+        if (jQuery.inArray('h2', horse_arr) == -1) horse_arr.push('h2');
+        horse_bet2 = horse_bet2 + bet_value;
+        $('#num_bet2').html(horse_bet2);
+      } else {
+        alert('bet max on 3 horses');
+        bra = false;
+      }
+    } else if (choosed_horse == 'h3') {
+      if (horse_arr.length < 3 || jQuery.inArray('h3', horse_arr) !== -1) {
+        if (jQuery.inArray('h3', horse_arr) == -1) horse_arr.push('h3');
+        horse_bet3 = horse_bet3 + bet_value;
+        $('#num_bet3').html(horse_bet3);
+      } else {
+        alert('bet max on 3 horses');
+        bra = false;
+      }
+    } else if (choosed_horse == 'h4') {
+      if (horse_arr.length < 3 || jQuery.inArray('h4', horse_arr) !== -1) {
+        if (jQuery.inArray('h4', horse_arr) == -1) horse_arr.push('h4');
+        horse_bet4 = horse_bet4 + bet_value;
+        $('#num_bet4').html(horse_bet4);
+      } else {
+        alert('bet max on 3 horses');
+        bra = false;
+      }
+    } else if (choosed_horse == 'h5') {
+      if (horse_arr.length < 3 || jQuery.inArray('h5', horse_arr) !== -1) {
+        if (jQuery.inArray('h5', horse_arr) == -1) horse_arr.push('h5');
+        horse_bet5 = horse_bet5 + bet_value;
+        $('#num_bet5').html(horse_bet5);
+      } else {
+        alert('bet max on 3 horses');
+        bra = false;
+      }
+    } else if (choosed_horse == 'h6') {
+      if (horse_arr.length < 3 || jQuery.inArray('h6', horse_arr) !== -1) {
+        if (jQuery.inArray('h6', horse_arr) == -1) horse_arr.push('h6');
+        horse_bet6 = horse_bet6 + bet_value;
+        $('#num_bet6').html(horse_bet6);
+      } else {
+        alert('bet max on 3 horses');
+        bra = false;
+      }
+    } else if (choosed_horse == 'h7') {
+      if (horse_arr.length < 3 || jQuery.inArray('h7', horse_arr) !== -1) {
+        if (jQuery.inArray('h7', horse_arr) == -1) horse_arr.push('h7');
+        horse_bet7 = horse_bet7 + bet_value;
+        $('#num_bet7').html(horse_bet7);
+      } else {
+        alert('bet max on 3 horses');
+        bra = false;
+      }
     }
-  }else alert("choose horse");
-}
-function sum_bet(){
-  if(choosed_horse=='h1') {
-    horse_bet1=horse_bet1+bet_value;
-    console.log(horse_bet1);
-  }else if(choosed_horse=='h2'){
-
-}}
-
+  }
 
   $('.bet_opt:nth-of-type(1)').click(function () {
     bet_value = 5;
@@ -78,22 +142,9 @@ function sum_bet(){
   });
 
   $('#rebet').click(function () {
-    current_credit = credit;
-    total_bet = 0;
-    bet_value = 0;
-    checkBet();
+    location.reload();
   });
 });
 
-$("#bet5").click(function() {
-  $.post("game.php", {change: $(this).val()},
-      function (data)
-      {
-         $("#mainContent").html(data);
-      }); 
-});
 
 
-function bodyonload() {
-  $('body').css('background-image', 'url()');
-}

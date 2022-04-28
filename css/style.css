@@ -1,17 +1,14 @@
 * {
   margin: 0;
-  padding: 0;
-}
+  padding: 0; }
 
 html, body {
-  height: 100vh;
-}
+  height: 100vh; }
 
 body {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/background.jpg") no-repeat;
   background-size: cover;
-  font-family: Leander;
-}
+  font-family: Leander; }
 
 .contract {
   position: absolute;
@@ -23,17 +20,14 @@ body {
   border-radius: 12px;
   padding: 3rem 5rem;
   background: url("../img/contractBackImg.png");
-  background-size: cover;
-}
+  background-size: cover; }
 
 h1 {
-  font-size: 60px;
-}
+  font-size: 60px; }
 
 #terms, #submit, #nbet, label {
   margin-top: 3em;
-  cursor: pointer;
-}
+  cursor: pointer; }
 
 .info {
   position: relative;
@@ -41,16 +35,13 @@ h1 {
   width: 30%;
   top: 2.5em;
   border-radius: 12px;
-  text-align: center;
-}
+  text-align: center; }
 
 #lname {
-  right: -16em;
-}
+  right: -16em; }
 
 #fname {
-  left: 1em;
-}
+  left: 1em; }
 
 #nbet {
   left: 50%;
@@ -58,33 +49,28 @@ h1 {
   width: 20%;
   text-align: center;
   margin-bottom: 3em;
-  top: 3em;
-}
+  top: 3em; }
 
 #submit {
   margin: 5em 0 0 50%;
   transform: translate(-50%);
   height: 4em;
   width: 5em;
-  border-radius: 12px;
-}
+  border-radius: 12px; }
 
 #header2 {
   color: red;
   text-align: center;
-  margin-top: 0.7em;
-}
+  margin-top: 0.7em; }
 
 #credit {
   color: red;
   font-size: 2em;
   margin-top: 0.4em;
-  margin-left: 0.4em;
-}
+  margin-left: 0.4em; }
 
 .stable {
-  text-align: center;
-}
+  text-align: center; }
 
 .horses {
   width: 7em;
@@ -92,19 +78,15 @@ h1 {
   transition: all 1s ease-in-out;
   filter: greyscale(100%);
   cursor: pointer;
-  margin-top: 3em;
-}
-.horses:hover {
-  transform: scale(1.4);
-}
+  margin-top: 3em; }
+  .horses:hover {
+    transform: scale(1.4); }
 
 .horses:nth-of-type(1) {
-  margin-left: 0;
-}
+  margin-left: 0; }
 
 .betting_opt {
-  text-align: center;
-}
+  text-align: center; }
 
 .bet_opt {
   width: 5em;
@@ -114,36 +96,31 @@ h1 {
   border-radius: 50%;
   cursor: pointer;
   margin-left: 3em;
-  margin-top: 3em;
-}
+  margin-top: 3em; }
 
 .bet_opt:nth-of-type(1) {
-  margin-left: 0;
-}
+  margin-left: 0; }
 
 #current_bet {
   text-align: center;
   margin-top: 3em;
-  font-size: 2em;
-}
+  font-size: 2em; }
 
 #submit_bet {
   position: relative;
   left: 50%;
-  transform: translate(-100%);
+  transform: translate(-50%);
   width: 10em;
   height: 8em;
-  margin-top: 3em;
-}
+  margin-top: 3em; }
 
 #rebet {
   width: 8em;
-  height: 6em;
-}
-.horse_opt{
+  height: 6em; }
+
+.horse_opt {
   display: inline-block;
-  margin-left: 2.5em;
-}
+  margin-left: 3em; }
 
 /*# sourceMappingURL=style.css.map */
 /*# sourceMappingURL=style.sass.map */
