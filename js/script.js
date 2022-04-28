@@ -43,6 +43,7 @@ $(document).ready(function () {
         if (bra) {
           total_bet = total_bet + bet_value;
           $('#current_bet_num').text(total_bet);
+          $('#totalBet').val(total_bet);
           current_credit = current_credit - bet_value;
           $('#credit').text('CREDIT: ' + current_credit);
         }
@@ -55,6 +56,7 @@ $(document).ready(function () {
         if (jQuery.inArray('h1', horse_arr) == -1) horse_arr.push('h1');
         horse_bet1 = horse_bet1 + bet_value;
         $('#num_bet1').html(horse_bet1);
+        $('#subject1').val(horse_bet1);
       } else {
         alert('bet max on 3 horses');
         bra = false;
@@ -64,6 +66,7 @@ $(document).ready(function () {
         if (jQuery.inArray('h2', horse_arr) == -1) horse_arr.push('h2');
         horse_bet2 = horse_bet2 + bet_value;
         $('#num_bet2').html(horse_bet2);
+        $('#subject2').val(horse_bet2);
       } else {
         alert('bet max on 3 horses');
         bra = false;
@@ -73,6 +76,7 @@ $(document).ready(function () {
         if (jQuery.inArray('h3', horse_arr) == -1) horse_arr.push('h3');
         horse_bet3 = horse_bet3 + bet_value;
         $('#num_bet3').html(horse_bet3);
+        $('#subject3').val(horse_bet3);
       } else {
         alert('bet max on 3 horses');
         bra = false;
@@ -82,6 +86,7 @@ $(document).ready(function () {
         if (jQuery.inArray('h4', horse_arr) == -1) horse_arr.push('h4');
         horse_bet4 = horse_bet4 + bet_value;
         $('#num_bet4').html(horse_bet4);
+        $('#subject4').val(horse_bet4);
       } else {
         alert('bet max on 3 horses');
         bra = false;
@@ -91,6 +96,7 @@ $(document).ready(function () {
         if (jQuery.inArray('h5', horse_arr) == -1) horse_arr.push('h5');
         horse_bet5 = horse_bet5 + bet_value;
         $('#num_bet5').html(horse_bet5);
+        $('#subject5').val(horse_bet5);
       } else {
         alert('bet max on 3 horses');
         bra = false;
@@ -100,6 +106,7 @@ $(document).ready(function () {
         if (jQuery.inArray('h6', horse_arr) == -1) horse_arr.push('h6');
         horse_bet6 = horse_bet6 + bet_value;
         $('#num_bet6').html(horse_bet6);
+        $('#subject6').val(horse_bet6);
       } else {
         alert('bet max on 3 horses');
         bra = false;
@@ -109,6 +116,7 @@ $(document).ready(function () {
         if (jQuery.inArray('h7', horse_arr) == -1) horse_arr.push('h7');
         horse_bet7 = horse_bet7 + bet_value;
         $('#num_bet7').html(horse_bet7);
+        $('#subject7').val(horse_bet7);
       } else {
         alert('bet max on 3 horses');
         bra = false;
@@ -145,6 +153,3 @@ $(document).ready(function () {
     location.reload();
   });
 });
-
-
-

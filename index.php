@@ -1,5 +1,7 @@
 <?php
 session_start();
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,7 +23,7 @@ session_start();
 </head>
 
 <body>
-    
+
     <div class="contract">
         <form method="POST" action="game.php">
              <h1>CONTRACT FORM</h1><br />
@@ -31,7 +33,7 @@ session_start();
             <input type="checkbox" id="terms" name="terms" required>
             <label for="terms">By checking the box you agree that you are older than 18 years old and <br />
                 that you accept all the terms and conditions of the Peaky FOOKING Blinders. </label> <br />
-            <input type="submit" id="submit" value="START" name="submit"> 
+            <input type="submit" id="submit" value="START" name="submit">
         </form>
     </div>
 
@@ -42,4 +44,3 @@ session_start();
 </body>
 
 </html>
-

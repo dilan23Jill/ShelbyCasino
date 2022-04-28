@@ -1,13 +1,18 @@
  <?php
-    $_SESSION['info'] = $_POST;
+session_start();
 
-    if (!isset($_POST['submit'])) {
-        header('Location: index.php');
-        exit;
-    } /* else {
-        echo "Your name is: " . $_SESSION['info']['fname'] . "<br>" .
-            "Your surname is: " . $_SESSION['info']['lname'];
-    } */
+$_SESSION['nbet'] = $_POST['nbet'];
+$credit = $_SESSION['nbet'];
+
+
+/* if (!isset($_POST['submit'])) {
+    header('Location: index.php');
+    exit;
+}  else {
+echo "Your name is: " . $_SESSION['info']['fname'] . "<br>" .
+"Your surname is: " . $_SESSION['info']['lname'];
+} */
+
 ?>
  <!DOCTYPE html>
  <html lang="en">
@@ -54,7 +59,7 @@
              <div class="horse_opt">
              <img src="img/horse/horse7.png" alt="horse7" id="h7" class="horses">
              <p id="num_bet7" class="m_bet"></p></div>
-         </div>    
+         </div>
         <form action="result.php" method="POST">
          <div class="betting_opt">
          <div class="bet_opt">5</div>
@@ -65,15 +70,26 @@
          <div class="bet_opt">500</div>
         </div>
         <p id="current_bet">CURRENT BET: <mark id="current_bet_num">0</mark></p>
-        <button type="button" id="rebet">REBET</button>         
+        <button type="button" id="rebet">REBET</button>
+        <input type="number" name="subject1" id="subject1" >
+        <input type="number" name="subject2" id="subject2">
+        <input type="number" name="subject3" id="subject3" >
+        <input type="number" name="subject4" id="subject4" >
+        <input type="number" name="subject5" id="subject5" >
+        <input type="number" name="subject6" id="subject6" >
+        <input type="number" name="subject7" id="subject7" >
+        <input type="number" name="totalBet" id="totalBet" >
+
+
+
         <input type="submit" id="submit_bet" value="bet" name="submit_bet">
 
         </form>
 
      <script>
-            credit = '<?= $_SESSION['info']['nbet'] ?>';
+            credit = '<?=$credit?>';
      </script>
-    
+
      <script src="js/script.js"></script>
  </body>
 
