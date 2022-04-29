@@ -67,18 +67,15 @@ $_SESSION['nbet'] = $credit;
          <div class="bet_opt">500</div>
         </div>
         <p id="current_bet">CURRENT BET: <mark id="current_bet_num">0</mark></p>
-        <button type="button" id="rebet">REBET</button>
-        <input type="number" name="subject1" id="subject1" >
-        <input type="number" name="subject2" id="subject2">
-        <input type="number" name="subject3" id="subject3" >
-        <input type="number" name="subject4" id="subject4" >
-        <input type="number" name="subject5" id="subject5" >
-        <input type="number" name="subject6" id="subject6" >
-        <input type="number" name="subject7" id="subject7" >
-        <input type="number" name="totalBet" id="totalBet" >
-
-
-
+        <button type="button" id="rebet">REBET</button><br/>
+        <input type="number" name="subject1" class="subject" id="subject1" >
+        <input type="number" name="subject2" class="subject" id="subject2">
+        <input type="number" name="subject3" class="subject" id="subject3" >
+        <input type="number" name="subject4" class="subject" id="subject4" >
+        <input type="number" name="subject5" class="subject" id="subject5" >
+        <input type="number" name="subject6" class="subject" id="subject6" >
+        <input type="number" name="subject7" class="subject" id="subject7" >
+        <input type="number" name="totalBet" class="subject" id="totalBet" required>
         <input type="submit" id="submit_bet" value="bet" name="submit_bet">
 
         </form>
