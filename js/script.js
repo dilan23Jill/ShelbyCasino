@@ -57,6 +57,7 @@ $(document).ready(function () {
         horse_bet1 = horse_bet1 + bet_value;
         $('#num_bet1').html(horse_bet1);
         $('#subject1').val(horse_bet1);
+        bra = true;
       } else {
         alert('bet max on 3 horses');
         bra = false;
@@ -67,6 +68,7 @@ $(document).ready(function () {
         horse_bet2 = horse_bet2 + bet_value;
         $('#num_bet2').html(horse_bet2);
         $('#subject2').val(horse_bet2);
+        bra = true;
       } else {
         alert('bet max on 3 horses');
         bra = false;
@@ -77,6 +79,7 @@ $(document).ready(function () {
         horse_bet3 = horse_bet3 + bet_value;
         $('#num_bet3').html(horse_bet3);
         $('#subject3').val(horse_bet3);
+        bra = true;
       } else {
         alert('bet max on 3 horses');
         bra = false;
@@ -87,6 +90,7 @@ $(document).ready(function () {
         horse_bet4 = horse_bet4 + bet_value;
         $('#num_bet4').html(horse_bet4);
         $('#subject4').val(horse_bet4);
+        bra = true;
       } else {
         alert('bet max on 3 horses');
         bra = false;
@@ -97,6 +101,7 @@ $(document).ready(function () {
         horse_bet5 = horse_bet5 + bet_value;
         $('#num_bet5').html(horse_bet5);
         $('#subject5').val(horse_bet5);
+        bra = true;
       } else {
         alert('bet max on 3 horses');
         bra = false;
@@ -107,6 +112,7 @@ $(document).ready(function () {
         horse_bet6 = horse_bet6 + bet_value;
         $('#num_bet6').html(horse_bet6);
         $('#subject6').val(horse_bet6);
+        bra = true;
       } else {
         alert('bet max on 3 horses');
         bra = false;
@@ -117,6 +123,7 @@ $(document).ready(function () {
         horse_bet7 = horse_bet7 + bet_value;
         $('#num_bet7').html(horse_bet7);
         $('#subject7').val(horse_bet7);
+        bra = true;
       } else {
         alert('bet max on 3 horses');
         bra = false;
@@ -152,4 +159,19 @@ $(document).ready(function () {
   $('#rebet').click(function () {
     location.reload();
   });
+  $('#start').click(function() {
+    for(i=0; i<=6; i++){
+      if(i==winner) time=2000
+      else time = Math.floor(Math.random() * (3000)) + 2500;
+    $(".horse_race:eq(" + i + ")").animate({ 
+    left: '90%',
+  }, time);
+  setTimeout(function(){
+    $('.race_path:eq('+winner+')').css({'background-color' : 'yellow'});
+  }, 2000);
+}
+
+  });
+  
+
 });

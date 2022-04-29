@@ -1,7 +1,10 @@
 <?php
-session_start();
+if (!isset($_POST['submit_bet'])) {
+    header('Location: index.php');
+    exit;
+}
+$credit = $_POST['credit'];
 
-$credit = $_SESSION['nbet'];
 $winner = rand(0, 6);
 echo nl2br("Winner is horse number: {$winner}\n");
 $var1 = 0;
@@ -44,27 +47,14 @@ for ($x = 0; $x <= 6; $x++) {
 }
 
 if ($bet_horses[$winner] > 0) {
-    $credit= $credit + ($totalBet * $cashBack) - $totalBet;
+    $credit = $credit + ($totalBet * $cashBack) - $totalBet;
     echo nl2br("You won: " . $totalBet * $cashBack . "\n");
 } else {
     $credit = $credit - $totalBet;
     echo nl2br("You lost: {$totalBet}\n");
 }
-    echo nl2br("Total balance is: " . $credit. "\n");
+echo nl2br("Total balance is: " . $credit . "\n");
 
-
-/* 
-if ($credit <= 5) {
-
-echo
-"<script> 
-    alert('You dont have enough money for minimal bet');
-    window.setTimeout(function(){
-    window.location.href = 'index.php';
-    }, 3000);
-</script>";
-
-} */
 ?>
 
 <!DOCTYPE html>
@@ -88,15 +78,47 @@ echo
 
 <body>
 
-    <div class="contract">
+    <div class="race">
+        <button id="start">START</button>
+        <div class="race_path">
+             <img src="img/horse/horse1.png" alt="horse1" id="h1" class="horse_race">
+            <img src="img/horse/finish-line.png" alt="finishLine1" class="finish_line">
+            </div>
+             <div class="race_path">
+             <img src="img/horse/horse2.png" alt="horse2" id="h2" class="horse_race">
+             <img src="img/horse/finish-line.png" alt="finishLine1" class="finish_line">
+            </div>
+             <div class="race_path">
+             <img src="img/horse/horse3.png" alt="horse3" id="h3" class="horse_race">
+             <img src="img/horse/finish-line.png" alt="finishLine1" class="finish_line">
+                </div>
+             <div class="race_path">
+             <img src="img/horse/horse4.png" alt="horse4" id="h4" class="horse_race">
+             <img src="img/horse/finish-line.png" alt="finishLine1" class="finish_line">
+            </div>
+             <div class="race_path">
+             <img src="img/horse/horse5.png" alt="horse5" id="h5" class="horse_race">
+             <img src="img/horse/finish-line.png" alt="finishLine1" class="finish_line">
+            </div>
+             <div class="race_path">
+             <img src="img/horse/horse6.png" alt="horse6" id="h6" class="horse_race">
+             <img src="img/horse/finish-line.png" alt="finishLine1" class="finish_line">
+            </div>
+             <div class="race_path">
+             <img src="img/horse/horse7.png" alt="horse7" id="h7" class="horse_race">
+             <img src="img/horse/finish-line.png" alt="finishLine1" class="finish_line">
+            </div>
+    </div>
             <form method="POST" action="game.php">
-           
+            <input type="hidden" name="credit_2" value="<?php echo $credit; ?>">
+
             <input type="submit" id="submit_rebet" value="START" name="submit_rebet">
         </form>
-    </div>
-
+        <script>
+            var credit = '<?=$credit?>';
+            var winner = '<?=$winner?>';
+     </script>
     <script src="js/script.js"></script>
 </body>
 
 </html>
-

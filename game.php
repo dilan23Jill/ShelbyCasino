@@ -1,17 +1,13 @@
  <?php
-session_start();
+if (isset($_POST['submit_rebet'])) {
+    $credit = $_POST['credit_2'];
+
+}else{
 
 $_SESSION['nbet'] = $_POST['nbet'];
 $credit = $_SESSION['nbet'];
-
-
-/* if (!isset($_POST['submit'])) {
-    header('Location: index.php');
-    exit;
-}  else {
-echo "Your name is: " . $_SESSION['info']['fname'] . "<br>" .
-"Your surname is: " . $_SESSION['info']['lname'];
-} */
+$_SESSION['nbet'] = $credit;
+}
 
 ?>
  <!DOCTYPE html>
@@ -61,6 +57,7 @@ echo "Your name is: " . $_SESSION['info']['fname'] . "<br>" .
              <p id="num_bet7" class="m_bet"></p></div>
          </div>
         <form action="result.php" method="POST">
+        <input type="hidden" name="credit" value="<?php echo $credit; ?>">
          <div class="betting_opt">
          <div class="bet_opt">5</div>
          <div class="bet_opt">10</div>
@@ -87,7 +84,7 @@ echo "Your name is: " . $_SESSION['info']['fname'] . "<br>" .
         </form>
 
      <script>
-            credit = '<?=$credit?>';
+            var credit = '<?=$credit?>';
      </script>
 
      <script src="js/script.js"></script>
