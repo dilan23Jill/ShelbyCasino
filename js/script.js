@@ -31,7 +31,7 @@ $(document).ready(function () {
   current_credit = credit;
   horse_arr = [];
 
-  $('#credit').text('CREDIT: ' + credit);
+  $('#credit').text(credit);
 
   function checkBet() {
     console.log(horse_arr);
@@ -45,7 +45,7 @@ $(document).ready(function () {
           $('#current_bet_num').text(total_bet);
           $('#totalBet').val(total_bet);
           current_credit = current_credit - bet_value;
-          $('#credit').text('CREDIT: ' + current_credit);
+          $('#credit').text(current_credit);
         }
       }
     } else alert('choose horse');
