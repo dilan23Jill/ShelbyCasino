@@ -70,7 +70,7 @@ $_SESSION['nbet'] = $credit;
          <div class="bet_opt">500</div>
         </div>
         <p id="current_bet">CURRENT BET: <mark id="current_bet_num">0</mark></p>
-        <button type="button" id="rebet">REBET</button><br/>
+        <button role="button" class="rebet" id="rebet">REBET</button><br/>
     
         <input type="number" name="subject1" class="subject" id="subject1" >
         <input type="number" name="subject2" class="subject" id="subject2">
@@ -80,7 +80,7 @@ $_SESSION['nbet'] = $credit;
         <input type="number" name="subject6" class="subject" id="subject6" >
         <input type="number" name="subject7" class="subject" id="subject7" >
         <input type="number" name="totalBet" class="subject" id="totalBet" required>
-        <input type="submit" id="submit_bet" value="bet" name="submit_bet">
+        <input type="submit" id="submit_bet" value="bet" class="submit" name="submit_bet">
 </div>
         </form>
 
