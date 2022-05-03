@@ -2,11 +2,11 @@
 if (isset($_POST['submit_rebet'])) {
     $credit = $_POST['credit_2'];
 
-}else{
+} else {
 
-$_SESSION['nbet'] = $_POST['nbet'];
-$credit = $_SESSION['nbet'];
-$_SESSION['nbet'] = $credit;
+    $_SESSION['nbet'] = $_POST['nbet'];
+    $credit = $_SESSION['nbet'];
+    $_SESSION['nbet'] = $credit;
 }
 
 ?>
@@ -31,33 +31,38 @@ $_SESSION['nbet'] = $credit;
 
  <body>
 <!--      <img src="img/background2.png" alt="b2" id="b2">
- -->       
+ -->
  <div class="frame">
- <div id="precredit">CREDIT:</div><div id="credit"></div>
+    <div class="precredit">CREDIT:<div id="credit"></div></div>
+
+    <p id="current_bet">CURRENT BET: <mark id="current_bet_num">0</mark></p>
+
             <h1 id="header2">PLACE YOUR BETS</h1>
 
          <div class="stable">
              <div class="horse_opt">
-             <img src="img/horse/horse1.png" alt="horse1" id="h1" class="horses">
-            <p id="num_bet1" class="m_bet"></p></div>
-             <div class="horse_opt">
-             <img src="img/horse/horse2.png" alt="horse2" id="h2" class="horses">
-             <p id="num_bet2" class="m_bet"></p></div>
-             <div class="horse_opt">
-             <img src="img/horse/horse3.png" alt="horse3" id="h3" class="horses">
-             <p id="num_bet3" class="m_bet"></p></div>
-             <div class="horse_opt">
-             <img src="img/horse/horse4.png" alt="horse4" id="h4" class="horses">
-             <p id="num_bet4" class="m_bet"></p></div>
-             <div class="horse_opt">
-             <img src="img/horse/horse5.png" alt="horse5" id="h5" class="horses">
-             <p id="num_bet5" class="m_bet"></p></div>
-             <div class="horse_opt">
-             <img src="img/horse/horse6.png" alt="horse6" id="h6" class="horses">
-             <p id="num_bet6" class="m_bet"></p></div>
-             <div class="horse_opt">
-             <img src="img/horse/horse7.png" alt="horse7" id="h7" class="horses">
-             <p id="num_bet7" class="m_bet"></p></div>
+                <p id="num_bet1" class="m_bet">0</p>
+                <img src="img/horse/horse1.png" alt="horse1" id="h1" class="horses">
+            </div>
+                <div class="horse_opt"><p id="num_bet2" class="m_bet">0</p>
+                <img src="img/horse/horse2.png" alt="horse2" id="h2" class="horses">
+            </div>
+                <div class="horse_opt"><p id="num_bet3" class="m_bet">0</p>
+                <img src="img/horse/horse3.png" alt="horse3" id="h3" class="horses">
+            </div>
+                <div class="horse_opt"><p id="num_bet4" class="m_bet">0</p>
+                <img src="img/horse/horse4.png" alt="horse4" id="h4" class="horses">
+            </div>
+                <div class="horse_opt"> <p id="num_bet5" class="m_bet">0</p>
+                <img src="img/horse/horse5.png" alt="horse5" id="h5" class="horses">
+            </div>
+                <div class="horse_opt"><p id="num_bet6" class="m_bet">0</p>
+                <img src="img/horse/horse6.png" alt="horse6" id="h6" class="horses">
+            </div>
+                <div class="horse_opt"><p id="num_bet7" class="m_bet">0</p>
+                <img src="img/horse/horse7.png" alt="horse7" id="h7" class="horses">
+            </div>
+
          </div>
         <form action="result.php" method="POST">
         <input type="hidden" name="credit" value="<?php echo $credit; ?>">
@@ -69,9 +74,9 @@ $_SESSION['nbet'] = $credit;
          <div class="bet_opt">100</div>
          <div class="bet_opt">500</div>
         </div>
-        <p id="current_bet">CURRENT BET: <mark id="current_bet_num">0</mark></p>
-        <button role="button" class="rebet" id="rebet">REBET</button><br/>
-    
+        <button id="rebet">REBET</button>
+        <br/>
+
         <input type="number" name="subject1" class="subject" id="subject1" >
         <input type="number" name="subject2" class="subject" id="subject2">
         <input type="number" name="subject3" class="subject" id="subject3" >
@@ -80,12 +85,18 @@ $_SESSION['nbet'] = $credit;
         <input type="number" name="subject6" class="subject" id="subject6" >
         <input type="number" name="subject7" class="subject" id="subject7" >
         <input type="number" name="totalBet" class="subject" id="totalBet" required>
-        <input type="submit" id="submit_bet" value="bet" class="submit" name="submit_bet">
-</div>
-        </form>
+        <input type="submit" name="submit_bet" class="subject">
+        <button id="submit_bet"  name="submit_bet" class="submit">BET</button>
 
+        </form>
+</div>
      <script>
             var credit = '<?=$credit?>';
+            var form = document.getElementById("submit_bet");
+
+document.getElementById("submit_bet").addEventListener("click", function () {
+  form.submit();
+});
      </script>
 
      <script src="js/script.js"></script>

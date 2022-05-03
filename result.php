@@ -6,7 +6,6 @@ if (!isset($_POST['submit_bet'])) {
 $credit = $_POST['credit'];
 
 $winner = rand(0, 6);
-echo nl2br("Winner is horse number: {$winner}\n");
 $var1 = 0;
 $var2 = 0;
 $var3 = 0;
@@ -15,6 +14,7 @@ $var5 = 0;
 $var6 = 0;
 $var7 = 0;
 $totalBet = $_POST['totalBet'];
+$win_lose_money;
 
 if (!empty($_POST['subject1'])) {
     $var1 = $_POST['subject1'];
@@ -48,12 +48,12 @@ for ($x = 0; $x <= 6; $x++) {
 
 if ($bet_horses[$winner] > 0) {
     $credit = $credit + ($totalBet * $cashBack) - $totalBet;
-    echo nl2br("You won: " . $totalBet * $cashBack . "\n");
+    $win_lose_money=$totalBet * $cashBack; 
 } else {
     $credit = $credit - $totalBet;
-    echo nl2br("You lost: {$totalBet}\n");
+    $win_lose_money=$totalBet; 
+    
 }
-echo nl2br("Total balance is: " . $credit . "\n");
 
 ?>
 
@@ -79,8 +79,18 @@ echo nl2br("Total balance is: " . $credit . "\n");
 <body>
 
     <div class="race">
-        <button id="start">START</button>
+        <button id="start" >START</button>           
+         <form method="POST" action="game.php">       
+        <p class="info_on_race"> <?php if ($bet_horses[$winner] > 0) {
+    echo nl2br("You won: " . $win_lose_money . "\n");
+} else {
+    echo nl2br("You lost: {$win_lose_money}\n");
+}?></p>
+       <p class="info_on_race"> <?php echo nl2br("Winner is horse number: {$winner}\n");?></p>
+       <p class="info_on_race"> <?php echo nl2br("Total balance is: {$credit} \n");?></p>
+
         <div class="race_path">
+            
              <img src="img/horse/horse1.png" alt="horse1" id="h1" class="horse_race">
             <img src="img/horse/finish-line.png" alt="finishLine1" class="finish_line">
             </div>
@@ -107,17 +117,20 @@ echo nl2br("Total balance is: " . $credit . "\n");
              <div class="race_path">
              <img src="img/horse/horse7.png" alt="horse7" id="h7" class="horse_race">
              <img src="img/horse/finish-line.png" alt="finishLine1" class="finish_line">
-            </div>
+            </div>            
+            <button id="submit_rebet" name="submit_rebet">REBET</button>
+
     </div>
-            <form method="POST" action="game.php">
             <input type="hidden" name="credit_2" value="<?php echo $credit; ?>">
 
-            <input type="submit" id="submit_rebet" value="START" name="submit_rebet">
         </form>
         <script>
             var credit = '<?=$credit?>';
             var winner = '<?=$winner?>';
-     </script>
+            document.getElementById("submit_rebet").addEventListener("click", function () {
+  form.submit();
+            });
+        </script>
     <script src="js/script.js"></script>
 </body>
 

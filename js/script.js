@@ -24,7 +24,7 @@ $(document).ready(function () {
     choosed_horse = this.id;
     horse = true;
   });
-
+  
   bra = true;
   total_bet = 0;
   bet_value = 0;
@@ -168,8 +168,15 @@ $(document).ready(function () {
   }, time);
   setTimeout(function(){
     $('.race_path:eq('+winner+')').css({'background-color' : 'yellow'});
+    $('.info_on_race').css({"display":"block"});
+
   }, 2000);
 }
+
+  });
+
+  $('#start').click(function(){
+    $('#start').css({"visibility":"hidden"});
 
   });
   

@@ -22,7 +22,6 @@ session_start();
 </head>
 
 <body>
-
     <div class="contract">
         <form method="POST" action="game.php">
              <h1>CONTRACT FORM</h1><br />
