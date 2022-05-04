@@ -1,8 +1,13 @@
  <?php
 if (isset($_POST['submit_rebet'])) {
     $credit = $_POST['credit_2'];
+    if($credit<5){
+        header("Location: index.php");
+    }
 
-} else {
+} elseif (!isset($_POST['submit'])) {
+    header("Location: index.php");
+}else{
 
     $_SESSION['nbet'] = $_POST['nbet'];
     $credit = $_SESSION['nbet'];

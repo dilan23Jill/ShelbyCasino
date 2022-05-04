@@ -167,17 +167,21 @@ $(document).ready(function () {
     left: '90%',
   }, time);
   setTimeout(function(){
-    $('.race_path:eq('+winner+')').css({'background-color' : 'yellow'});
+    $('.race_path').css({'filter' : 'brightness(50%)'});
+    $('.race_path:eq('+winner+')').css({'background-color' : 'yellow','filter' : 'brightness(100%)'});
     $('.info_on_race').css({"display":"block"});
+    $('#submit_rebet').css({"visibility":"visible"});
 
   }, 2000);
 }
 
   });
-
+  audio = new Audio("../audio/gallop.mp3");
+  audio2 = new Audio("../audio/whinny.mp3");
   $('#start').click(function(){
     $('#start').css({"visibility":"hidden"});
-
+    audio.play();
+    audio2.play();
   });
   
 
