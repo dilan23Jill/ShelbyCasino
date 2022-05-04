@@ -1,20 +1,19 @@
 @mixin centerer
-    position: absolute
-    top: 50%
-    left: 50%
-    transform: translate(-50%, -50%)
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
 
 *
   margin: 0
   padding: 0
   font-family: Leander
 
-
 body
   height: 100vh
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/background.jpg") no-repeat
   background-size: cover
-  
+
 /* index.php */
 
 .contract
@@ -36,6 +35,9 @@ h1
   margin-top: 3em
   cursor: pointer
 
+#terms
+  accent-color: #000
+
 .info
   position: relative
   height: 3em
@@ -43,6 +45,15 @@ h1
   top: 2.5em
   border-radius: 12px
   text-align: center
+  background: #000
+  color: #fff
+  outline: none
+
+.info:focus, .info:focus
+  color: #fff
+
+input::placeholder
+  color: #fff
 
 #lname
   right: -16em
@@ -64,7 +75,9 @@ h1
   height: 4em
   width: 5em
   border-radius: 12px
-
+  background: #000
+  color: #fff
+  outline: none
 /* game.php */
 
 .frame
@@ -122,7 +135,7 @@ h1
 
 .m_bet
   text-align: center
-  margin-top: .5em 
+  margin-top: .5em
   font-size: 1.5em
   color: yellow
 
@@ -156,7 +169,7 @@ h1
   transform: translateX(-50%)
   background: #000
   border: 0
-  padding: 40px 50px 
+  padding: 40px 50px
   border-radius: 12px
   cursor: pointer
   overflow: hidden
@@ -174,7 +187,7 @@ h1
     width: 200%
     height: 100%
     transform: skewX(-20deg)
-    background-image: linear-gradient(to right,transparent,rgba(#fff,.3),transparent)    
+    background-image: linear-gradient(to right,transparent,rgba(#fff,.3),transparent)
   &:hover:after
     animation: shine 1.6s ease
   &:active
@@ -184,12 +197,12 @@ h1
 @keyframes shine
   100%
     left: 200%
- 
+
 #rebet
   position: absolute
   font-size: 2em
   left: 1em
-  bottom: 1em 
+  bottom: 1em
   background: #000
   border: 0
   padding: 20px 25px
@@ -210,7 +223,7 @@ h1
     width: 200%
     height: 100%
     transform: skewX(-20deg)
-    background-image: linear-gradient(to right,transparent,rgba(#fff,.3),transparent)    
+    background-image: linear-gradient(to right,transparent,rgba(#fff,.3),transparent)
   &:hover:after
     animation: shine 1.6s ease
   &:active
@@ -250,10 +263,10 @@ h1
   width: 3em
   position: relative
   left: 90%
-  bottom:100%
+  bottom: 100%
 
 #start
-  padding: 20px 20px 
+  padding: 20px 20px
   font-size: 15px
 
 #submit_rebet
@@ -281,13 +294,4 @@ h1
 .info_on_race:nth-of-type(3)
   right: 5%
 
-
-
 /* result.php */
-
-
-
-
-
-
-  
