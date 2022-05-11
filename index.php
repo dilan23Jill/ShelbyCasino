@@ -38,6 +38,7 @@ session_start();
     <script>
          var credit;
      </script>
+
     <script src="js/script.js"></script>
 </body>
 

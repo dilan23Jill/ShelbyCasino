@@ -1,4 +1,5 @@
 $(document).ready(function () {
+ 
   horse = false;
   horse_bet1 = 0;
   horse_bet2 = 0;
