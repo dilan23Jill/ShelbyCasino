@@ -1,14 +1,12 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: Leander;
-}
+  font-family: Leander; }
 
 body {
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/background.jpg") no-repeat;
-  background-size: cover;
-}
+  background-size: cover; }
 
 /* index.php */
 .contract {
@@ -21,21 +19,17 @@ body {
   border-radius: 12px;
   padding: 3rem 5rem;
   background: url("../img/contractBackImg.png");
-  background-size: cover;
-}
+  background-size: cover; }
 
 h1 {
-  font-size: 60px;
-}
+  font-size: 60px; }
 
 #terms, #submit, #nbet, label {
   margin-top: 3em;
-  cursor: pointer;
-}
+  cursor: pointer; }
 
 #terms {
-  accent-color: #000;
-}
+  accent-color: #000; }
 
 .info {
   position: relative;
@@ -46,24 +40,19 @@ h1 {
   text-align: center;
   background: #000;
   color: #fff;
-  outline: none;
-}
+  outline: none; }
 
 .info:focus, .info:focus {
-  color: #fff;
-}
+  color: #fff; }
 
 input::placeholder {
-  color: #fff;
-}
+  color: #fff; }
 
 #lname {
-  right: -16em;
-}
+  right: -16em; }
 
 #fname {
-  left: 1em;
-}
+  left: 1em; }
 
 #nbet {
   left: 50%;
@@ -71,8 +60,7 @@ input::placeholder {
   width: 20%;
   text-align: center;
   margin-bottom: 3em;
-  top: 3em;
-}
+  top: 3em; }
 
 #submit {
   margin: 5em 0 0 50%;
@@ -82,13 +70,12 @@ input::placeholder {
   border-radius: 12px;
   background: #000;
   color: #fff;
-  outline: none;
-}
+  outline: none; }
 
 /* game.php */
 .frame {
   width: 80rem;
-  height: 40rem;
+  height: 45rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -96,14 +83,12 @@ input::placeholder {
   border-radius: 12px;
   opacity: 0.9;
   background: url("../img/background3.jpg");
-  background-size: cover;
-}
+  background-size: cover; }
 
 .precredit {
   display: inline-block;
   font-size: 2em;
-  margin: 0 0 0 0.5em;
-}
+  margin: 0 0 0 0.5em; }
 
 #credit {
   display: inline-block;
@@ -111,22 +96,19 @@ input::placeholder {
   margin: 0.25em 0 0.4em 0.5em;
   border-bottom: 3px solid black;
   border-top: 3px solid black;
-  padding-bottom: 0.15em;
-}
+  padding-bottom: 0.15em; }
 
 #current_bet {
   display: inline-block;
   float: right;
   margin: 1em 1em 0 0;
-  font-size: 2em;
-}
+  font-size: 2em; }
 
 #header2 {
   position: relative;
   left: 50%;
   transform: translateX(-20%);
-  font-size: 3em;
-}
+  font-size: 3em; }
 
 .stable {
   position: relative;
@@ -134,33 +116,27 @@ input::placeholder {
   height: fit-content;
   display: flex;
   justify-content: center;
-  margin-top: 1em;
-}
+  margin-top: 1em; }
 
 .horse_opt {
   display: inline-block;
-  margin-left: 2.7em;
-}
+  margin-left: 2.7em; }
 
 .horse_opt:first-of-type {
-  margin-left: 0;
-}
+  margin-left: 0; }
 
 .horses {
   width: 7.5em;
   transition: all 0.5s ease-in-out;
-  cursor: pointer;
-}
-.horses:hover {
-  transform: scale(1.3);
-}
+  cursor: pointer; }
+  .horses:hover {
+    transform: scale(1.3); }
 
 .m_bet {
   text-align: center;
   margin-top: 0.5em;
   font-size: 1.5em;
-  color: yellow;
-}
+  color: yellow; }
 
 .betting_opt {
   width: max-content;
@@ -171,8 +147,7 @@ input::placeholder {
   margin-top: 3em;
   padding: 0.5em;
   border: 5px dashed yellow;
-  border-radius: 12px;
-}
+  border-radius: 12px; }
 
 .bet_opt {
   font-size: 1.2em;
@@ -184,8 +159,7 @@ input::placeholder {
   padding: 0.5em;
   border: 3px solid red;
   border-radius: 12px;
-  cursor: pointer;
-}
+  cursor: pointer; }
 
 #submit_bet, #start, #submit_rebet {
   position: relative;
@@ -203,31 +177,25 @@ input::placeholder {
   color: #fff;
   letter-spacing: 0.2em;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-  transition: all 0.2s ease;
-}
-#submit_bet:after, #start:after, #submit_rebet:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -200%;
-  width: 200%;
-  height: 100%;
-  transform: skewX(-20deg);
-  background-image: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.3), transparent);
-}
-#submit_bet:hover:after, #start:hover:after, #submit_rebet:hover:after {
-  animation: shine 1.6s ease;
-}
-#submit_bet:active, #start:active, #submit_rebet:active {
-  transform: translateY(1px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-}
+  transition: all 0.2s ease; }
+  #submit_bet:after, #start:after, #submit_rebet:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -200%;
+    width: 200%;
+    height: 100%;
+    transform: skewX(-20deg);
+    background-image: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.3), transparent); }
+  #submit_bet:hover:after, #start:hover:after, #submit_rebet:hover:after {
+    animation: shine 1.6s ease; }
+  #submit_bet:active, #start:active, #submit_rebet:active {
+    transform: translateY(1px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); }
 
 @keyframes shine {
   100% {
-    left: 200%;
-  }
-}
+    left: 200%; } }
 #rebet {
   position: absolute;
   font-size: 2em;
@@ -244,30 +212,25 @@ input::placeholder {
   color: #fff;
   letter-spacing: 0.2em;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-  transition: all 0.2s ease;
-}
-#rebet:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -200%;
-  width: 200%;
-  height: 100%;
-  transform: skewX(-20deg);
-  background-image: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.3), transparent);
-}
-#rebet:hover:after {
-  animation: shine 1.6s ease;
-}
-#rebet:active {
-  transform: translateY(1px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-}
+  transition: all 0.2s ease; }
+  #rebet:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -200%;
+    width: 200%;
+    height: 100%;
+    transform: skewX(-20deg);
+    background-image: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.3), transparent); }
+  #rebet:hover:after {
+    animation: shine 1.6s ease; }
+  #rebet:active {
+    transform: translateY(1px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); }
 
 .subject {
   display: none;
-  /* result.php */
-}
+  /* result.php */ }
 
 .race {
   position: absolute;
@@ -277,67 +240,56 @@ input::placeholder {
   top: 50%;
   transform: translate(-50%, -50%);
   background-color: lightblue;
-  border-radius: 12px;
-}
+  border-radius: 12px; }
 
 .race_path {
   width: 100%;
   height: 3em;
   background: #964B00;
-  transition: background 0.5s ease-in-out;
-}
+  transition: background 0.5s ease-in-out; }
 
 .horse_race {
   position: relative;
   height: 3em;
   display: block;
   margin-top: 2em;
-  z-index: 1;
-}
+  z-index: 1; }
 
 .finish_line {
   height: 100%;
   width: 3em;
   position: relative;
   left: 90%;
-  bottom: 100%;
-}
+  bottom: 100%; }
 
 #start {
   padding: 20px 20px;
-  font-size: 15px;
-}
+  font-size: 15px; }
 
 #submit_rebet {
   padding: 20px 20px;
   font-size: 15px;
   margin-bottom: 1em;
-  visibility: hidden;
-}
+  visibility: hidden; }
 
 .backgroundWhite {
-  background-color: #fff;
-}
+  background-color: #fff; }
 
 .info_on_race {
   position: absolute;
   font-size: 25px;
   top: 5%;
-  display: none;
-}
+  display: none; }
 
 .info_on_race:first-of-type {
-  left: 5%;
-}
+  left: 5%; }
 
 .info_on_race:nth-of-type(2) {
   left: 50%;
-  transform: translateX(-50%);
-}
+  transform: translateX(-50%); }
 
 .info_on_race:nth-of-type(3) {
-  right: 5%;
-}
+  right: 5%; }
 
 /* result.php */
 

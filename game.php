@@ -12,6 +12,8 @@ if (isset($_POST['submit_rebet'])) {
     $_SESSION['nbet'] = $_POST['nbet'];
     $credit = $_SESSION['nbet'];
     $_SESSION['nbet'] = $credit;
+    echo "<script type='text/javascript'>alert('Welcome to Shelby Casino! Rules are simple, bet on max 3 horses up to 500 pounds, bet until you lose your money. Good luck!');</script>";
+
 }
 
 ?>
@@ -34,7 +36,7 @@ if (isset($_POST['submit_rebet'])) {
      </style>
  </head>
 
- <body onload=alert()>
+ <body>
 <!--      <img src="img/background2.png" alt="b2" id="b2">
  -->
  <div class="frame">
@@ -102,13 +104,8 @@ if (isset($_POST['submit_rebet'])) {
 document.getElementById("submit_bet").addEventListener("click", function () {
   form.submit();
 });
-/* function alert(){
-  Swal.fire(
-    'Welcome to Shelby Casino!',
-    'Rules are simple, bet on max 3 horses up to 500 pounds, bet until you lose your money. Good luck!',
-  )} */
+
      </script>
-     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
      <script src="js/script.js"></script>
  </body>
 
